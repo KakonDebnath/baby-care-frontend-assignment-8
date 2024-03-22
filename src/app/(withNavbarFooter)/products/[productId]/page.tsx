@@ -1,8 +1,4 @@
-export type TDynamicProductParams = {
-  params: {
-    productId: string;
-  };
-};
+import { TDynamicProductParams } from "@/type";
 
 const DynamicProductPage = ({ params }: TDynamicProductParams) => {
   console.log(params.productId);

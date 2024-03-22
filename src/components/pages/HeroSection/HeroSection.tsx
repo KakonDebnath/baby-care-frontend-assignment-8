@@ -8,12 +8,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import HeroSliderImage from './HeroSliderImage';
 import { THeroSectionProps } from '@/type';
-
+import HeroSectionText from './HeroSectionText';
 
 const HeroSection = ({ images }: THeroSectionProps) => {
   return (
     <section className="py-12">
-      <div className="">
+      <div className="px-10">
+        <HeroSectionText />
         <Swiper
           navigation
           slidesPerView={3}
