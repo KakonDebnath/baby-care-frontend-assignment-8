@@ -1,5 +1,7 @@
+import { Button } from '@/components/ui/button';
 import { TProduct } from '@/type';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ProductCard = ({ product }: { product: TProduct }) => {
   return (
@@ -15,6 +17,10 @@ const ProductCard = ({ product }: { product: TProduct }) => {
         <p>{product.name}</p>
         <p>{product.price}</p>
       </div>
+
+      <Link href={`/products/${product._id}`}>
+        <Button className="w-full">View Product</Button>
+      </Link>
     </div>
   );
 };
