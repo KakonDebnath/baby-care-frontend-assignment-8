@@ -16,29 +16,14 @@ const Navbar = () => {
             Home
           </Button>
         </Link>
-        <Link href="/">
-          <Button className="text-lg" variant="ghost">
-            Category
-          </Button>
-        </Link>
-        <Link href="/">
+        <Link href="/products">
           <Button className="text-lg" variant="ghost">
             Products
           </Button>
         </Link>
-        <Link href="/">
+        <Link href="/flash-sale">
           <Button className="text-lg" variant="ghost">
             Flash Sale
-          </Button>
-        </Link>
-        <Link href="/">
-          <Button className="text-lg" variant="ghost">
-            About Us
-          </Button>
-        </Link>
-        <Link href="/">
-          <Button className="text-lg" variant="ghost">
-            Contact Us
           </Button>
         </Link>
         <Link href="/dashboard">
