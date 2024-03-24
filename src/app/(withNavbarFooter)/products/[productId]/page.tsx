@@ -1,11 +1,22 @@
 import { TDynamicProductParams, TProduct } from '@/type';
 import Image from 'next/image';
 
+export const generateStaticParams = async () => {
+  const res = await fetch(
+    `https://assignment-8-backend.vercel.app/api/products`
+  );
+  const result = await res.json();
+  const products = result.data;
+  return products.slice(0, 10).map((product: TProduct) => ({
+    productId: product._id,
+  }));
+};
+
 const DynamicProductPage = async ({ params }: TDynamicProductParams) => {
   console.log(params);
 
   const res = await fetch(
-    `http://localhost:5000/api/products/${params.productId}`,
+    `https://assignment-8-backend.vercel.app/api/products/${params.productId}`,
     {
       cache: 'no-store',
     }
