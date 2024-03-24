@@ -13,7 +13,6 @@ export const generateStaticParams = async () => {
 };
 
 const DynamicProductPage = async ({ params }: TDynamicProductParams) => {
-  console.log(params);
 
   const res = await fetch(
     `https://assignment-8-backend.vercel.app/api/products/${params.productId}`,
